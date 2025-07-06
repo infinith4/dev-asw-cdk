@@ -1,7 +1,13 @@
 
 python --version
 
-cdk bootstrap
+cdk --version
 
-cdk deploy AppRunnerServiceStack
+source .venv/bin/activate
+
+python -m pip install -r requirements.txt
+
+cdk ls
+cd deploy_src/
+
 

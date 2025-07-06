@@ -1,12 +1,12 @@
 // For format details, see https://aka.ms/devcontainer.json. For config options, see the
 // README at: https://github.com/devcontainers/templates/tree/main/src/alpine
 {
-	"name": "dev-aws-cdk",
+	"name": "dev-aws-cdk_main",
 	// Or use a Dockerfile or Docker Compose file. More info: https://containers.dev/guide/dockerfile
 	"dockerComposeFile": [
 		"../docker-compose.yml"
 	],
-	"service": "app",
+	"service": "app_main",
 	"features": {
 		// See https://containers.dev/features for list of features
 		"ghcr.io/devcontainers/features/docker-in-docker:2": {
@@ -31,7 +31,7 @@
 	//"forwardPorts": [3006,3306],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "",
+	"postCreateCommand": "npm install -g aws-cdk && cd ./deploy_src",
 	// Configure tool-specific properties.
 	// "customizations": {},
 

@@ -3,11 +3,11 @@ import os
 
 import aws_cdk as cdk
 
-from aws_cdk.aws_cdk_stack import AwsCdkStack
+from pj_cdk.apprunner_stack import AppRunnerServiceStack
 
 
 app = cdk.App()
-AwsCdkStack(app, "AwsCdkStack",
+AppRunnerServiceStack(app, "AppRunnerServiceStack",
     # If you don't specify 'env', this stack will be environment-agnostic.
     # Account/Region-dependent features and context lookups will not work,
     # but a single synthesized template can be deployed anywhere.
